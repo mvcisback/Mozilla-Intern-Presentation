@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Intern Presentation</title>
-    <meta content='DXR Intern Presentation' name='description'>
-    <meta content='Marcell Jose Vazquez-Chanlatte' name='author'>
-    <link href='css/reveal.min.css' rel='stylesheet'>
-    <link href='css/theme/default.css' id='theme' rel='stylesheet'>
-    <link href='lib/css/zenburn.css' rel='stylesheet'>
-    <script>
+!!!
+%html
+  %head
+    %title Intern Presentation
+    %meta{:name => "description", :content => "DXR Intern Presentation"}
+    %meta{:name => "author", :content => "Marcell Jose Vazquez-Chanlatte"}
+    %link{:rel => "stylesheet", :href => "css/reveal.min.css"}
+    %link{:rel => "stylesheet", :href => "css/theme/default.css", :id => "theme"}
+    %link{:rel => "stylesheet", :href => "lib/css/zenburn.css"}
+    :javascript
       if( window.location.search.match( /print-pdf/gi ) ) {
           var link = document.createElement( 'link' );
           link.rel = 'stylesheet';
@@ -15,26 +15,23 @@
           link.href = 'css/print/pdf.css';
           document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
-    </script>
-  </head>
-  <body>
-    <div class='reveal'>
-      <div class='slides'>
-        <section>
-          <h1>DxR</h1>
-          <h3>Lets talk about Javascript</h3>
-          <p id='subtitle'>
-            <p>Created by <a href="http://mvcisback.github.io">Marcell Jose Vazquez-Chanlatte</a>/<a href="http://twitter.com/mvcisback">@mvcisback</a></p>
-          </p>
-        </section>
-        <section>
-          <h1>Fin</h1>
-        </section>
-      </div>
-    </div>
-    <script src='lib/js/head.min.js'></script>
-    <script src='js/reveal.min.js'></script>
-    <script>
+  %body
+    .reveal
+      .slides
+        %section
+          %h1 DxR
+          %h3 Lets talk about Javascript
+          %p{:id => "subtitle"}
+            :markdown
+              Created by [Marcell Jose Vazquez-Chanlatte](http://mvcisback.github.io)/[@mvcisback](http://twitter.com/mvcisback)
+
+        %section
+          %h1 Fin
+              
+          
+    %script{:src => "lib/js/head.min.js"}
+    %script{:src => "js/reveal.min.js"}
+    :javascript
       Reveal.initialize({
       controls: true, progress: true, history: true, center: true,
       theme: "sky", // available themes are in /css/theme
@@ -46,6 +43,3 @@
         { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
       ]
       });
-    </script>
-  </body>
-</html>
