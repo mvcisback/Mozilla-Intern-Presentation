@@ -2,6 +2,8 @@
 ** What is DxR
    - Dinos vs Robots Joke
    - What it actually means
+     - Dehydra cross reference
+
 
 ** Future of DxR
    - Elastic Search <- Erik
@@ -12,6 +14,7 @@
 
 ** Porting C Plugin
    - Really helped work on kinks in API
+   - Horror stories of clang plugin
 
 * Type Search
 ** Hoogle - What is is
@@ -36,3 +39,4 @@
 ** SpiderFlunky - Super Secret Haskell Port
    - Symmetric Parsing of Mozilla Parser API
    - Template Haskell _might_ be the way to emulate the dynamic Parsing using in SpiderFlunky
+
