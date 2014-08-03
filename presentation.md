@@ -1,8 +1,6 @@
-% Mozilla Intern Presentation
+% DXR
 % Marcell Vazquez-Chanlatte/@mvcisback
 
-
-# DXR
 # C Plugin
 # Type Search
 # JS and SpiderFlunky
