@@ -3,5 +3,6 @@
 
 
 # DXR
+# C Plugin
 # Type Search
-# SpiderFlunky
+# JS and SpiderFlunky
