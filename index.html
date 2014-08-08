@@ -139,12 +139,29 @@
 </section>
 <section id="js-and-spiderflunky" class="slide level1">
 <h1>JS and SpiderFlunky</h1>
+<ul>
+<li class="fragment">Reflect.Parse -&gt; AST</li>
+</ul>
+</section>
+<section id="slight-hack" class="slide level1">
+<h1>Slight Hack</h1>
+<pre><code>interface Node {
+    type: string;
+    loc: SourceLocation | null;
+}
+
+interface Identifier &lt;: Node, Expression, Pattern {
+    type: &quot;Identifier&quot;;
+    name: string;
+}</code></pre>
 <aside class="notes">
 <ul>
-<li>Parsing Parser API</li>
-<li>SpiderFlunky - Haskell Port #</li>
+<li>Parse the Mozilla Parser API page to build Node inheritance graph.</li>
 </ul>
 </aside>
+</section>
+<section id="super-secret-haskell-ast" class="slide level1">
+<h1>Super Secret Haskell AST</h1>
 </section>
     </div>
   </div>

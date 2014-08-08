@@ -87,8 +87,22 @@
 
 # JS and SpiderFlunky #
 > - Reflect.Parse -> AST
-> - 
+
+# Slight Hack #
+
+```
+interface Node {
+    type: string;
+    loc: SourceLocation | null;
+}
+
+interface Identifier <: Node, Expression, Pattern {
+    type: "Identifier";
+    name: string;
+}
+```
+
 <div class="notes">
-- Parsing Parser API
-- SpiderFlunky - Haskell Port #
+- Parse the Mozilla Parser API page to build Node inheritance graph.
 </div>
+# Super Secret Haskell SpiderFlunky #
