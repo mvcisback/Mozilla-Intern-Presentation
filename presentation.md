@@ -3,6 +3,7 @@
 
 # What is DxR
 <div class="notes">
+- Lets get this out of the way
 - Dinos vs Robots
 - Dehydra Cross Reference
 </div>
