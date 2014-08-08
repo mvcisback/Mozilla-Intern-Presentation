@@ -67,8 +67,8 @@
 <section id="type-search" class="slide level1">
 <h1>Type Search</h1>
 </section>
-<section id="hoogle---what-is-is" class="slide level1">
-<h1>Hoogle - What is is</h1>
+<section id="hoogle---what-it-is" class="slide level1">
+<h1>Hoogle - What it is</h1>
 <aside class="notes">
 <ul>
 <li>Using Types as a query type</li>
@@ -78,11 +78,62 @@
 </section>
 <section id="specializing-for-c" class="slide level1">
 <h1>Specializing for C</h1>
+<pre><code>(type1&lt;X,Y&gt;, type2, type3) -&gt; output&lt;Z&gt;</code></pre>
 <aside class="notes">
 <ul>
 <li>Various attempts at query language</li>
 <li>C++ 11 auto function definition looks like uncurried version</li>
 <li>C++ 11 auto can act as wild card type</li>
+</ul>
+</aside>
+</section>
+<section id="ok-..." class="slide level1">
+<h1>Ok ...</h1>
+<aside class="notes">
+<ul>
+<li>Q: That's all good, how is that useful in not Haskell</li>
+<li>A: Next 2 Slides!!!</li>
+</ul>
+</aside>
+</section>
+<section id="how-do-i-get-a-type-b" class="slide level1">
+<h1>How do I get a type B</h1>
+<pre><code>(auto) -&gt; B</code></pre>
+</section>
+<section id="how-do-i-use-a-type-b" class="slide level1">
+<h1>How do I use a type B</h1>
+<pre><code>(B) -&gt; auto</code></pre>
+</section>
+<section id="fine-but-what-about-javascript" class="slide level1">
+<h1>Fine, but what about Javascript?</h1>
+<ul>
+<li class="fragment">No, explicit types</li>
+<li class="fragment">Too dynamic too reliably infer in the general case</li>
+<li class="fragment">Overall a bad time</li>
+</ul>
+</section>
+<section id="step-program-for-inferring-javascript-types" class="slide level1">
+<h1>2 Step program for inferring Javascript types</h1>
+</section>
+<section id="dont" class="slide level1">
+<h1>1) Don't</h1>
+</section>
+<section id="at-least-not-initially..." class="slide level1">
+<h1>At least not initially...</h1>
+<ul>
+<li class="fragment">Support user annotated types (.d.ts)</li>
+<li class="fragment">Bootstrap external libraries using DefinitelyTyped</li>
+</ul>
+</section>
+<section id="cheat" class="slide level1">
+<h1>2) Cheat</h1>
+</section>
+<section id="dxr-compiler" class="slide level1">
+<h1>DXR ≠ Compiler</h1>
+<aside class="notes">
+<ul>
+<li>For indexing purposes, DXR doesn't need to be sound.</li>
+<li>Just need to rank possibly infered types.</li>
 </ul>
 </aside>
 </section>
@@ -112,7 +163,7 @@
         history: true,
         center: true,
         theme: 'default', // available themes are in /css/theme
-        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
 
         // Optional libraries used to extend on reveal.js
         dependencies: [

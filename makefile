@@ -1,6 +1,6 @@
 all: html
 
 html:
-	cabal exec -- pandoc presentation.md -s -t revealjs -o index.html -V theme=default -V transition=linear --section-divs
+	cabal exec -- pandoc presentation.md -s -t revealjs -o index.html -V theme=default -V transition=none --section-divs
 
 .PHONY: html
