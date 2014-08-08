@@ -72,9 +72,10 @@
 
 # 1) Don't
 
-# At least not initially...
-> - Support user annotated types (.d.ts)
-> - Bootstrap external libraries using DefinitelyTyped
+<div class="notes">
+- Support user annotated types (.d.ts)
+- Bootstrap external libraries using DefinitelyTyped
+</div>
 
 # 2) Cheat
 
