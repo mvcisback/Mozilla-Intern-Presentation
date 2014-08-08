@@ -64,33 +64,18 @@
 
 # Fine, but what about Javascript?
 
-> - No, explicit types
-> - Too dynamic too reliably infer in the general case
-> - Overall a bad time
+<div class="notes">
+ - No, explicit types
+ - Too dynamic too reliably infer in the general case
+ - Overall a bad time
+</div>
 
 # 2 Step program for inferring Javascript types
 
 # 1) Don't
 
+# A Slight Hack #
 <div class="notes">
-- Support user annotated types (.d.ts)
-- Bootstrap external libraries using DefinitelyTyped
-</div>
-
-# 2) Cheat
-
-# DXR ≠ Compiler
-<div class="notes">
-- For indexing purposes, DXR doesn't need to be sound.
-- Just need to rank possibly infered types.
-</div>
-
-
-# JS and SpiderFlunky #
-> - Reflect.Parse -> AST
-
-# Slight Hack #
-
 ```
 interface Node {
     type: string;

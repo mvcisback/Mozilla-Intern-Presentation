@@ -106,11 +106,13 @@
 </section>
 <section id="fine-but-what-about-javascript" class="slide level1">
 <h1>Fine, but what about Javascript?</h1>
+<aside class="notes">
 <ul>
-<li class="fragment">No, explicit types</li>
-<li class="fragment">Too dynamic too reliably infer in the general case</li>
-<li class="fragment">Overall a bad time</li>
+<li>No, explicit types</li>
+<li>Too dynamic too reliably infer in the general case</li>
+<li>Overall a bad time</li>
 </ul>
+</aside>
 </section>
 <section id="step-program-for-inferring-javascript-types" class="slide level1">
 <h1>2 Step program for inferring Javascript types</h1>
@@ -118,33 +120,9 @@
 <section id="dont" class="slide level1">
 <h1>1) Don't</h1>
 </section>
-<section id="at-least-not-initially..." class="slide level1">
-<h1>At least not initially...</h1>
-<ul>
-<li class="fragment">Support user annotated types (.d.ts)</li>
-<li class="fragment">Bootstrap external libraries using DefinitelyTyped</li>
-</ul>
-</section>
-<section id="cheat" class="slide level1">
-<h1>2) Cheat</h1>
-</section>
-<section id="dxr-compiler" class="slide level1">
-<h1>DXR ≠ Compiler</h1>
-<aside class="notes">
-<ul>
-<li>For indexing purposes, DXR doesn't need to be sound.</li>
-<li>Just need to rank possibly infered types.</li>
-</ul>
-</aside>
-</section>
-<section id="js-and-spiderflunky" class="slide level1">
-<h1>JS and SpiderFlunky</h1>
-<ul>
-<li class="fragment">Reflect.Parse -&gt; AST</li>
-</ul>
-</section>
-<section id="slight-hack" class="slide level1">
-<h1>Slight Hack</h1>
+<section id="a-slight-hack" class="slide level1">
+<h1>A Slight Hack</h1>
+<div class="notes">
 <pre><code>interface Node {
     type: string;
     loc: SourceLocation | null;
@@ -160,8 +138,8 @@ interface Identifier &lt;: Node, Expression, Pattern {
 </ul>
 </aside>
 </section>
-<section id="super-secret-haskell-ast" class="slide level1">
-<h1>Super Secret Haskell AST</h1>
+<section id="super-secret-haskell-spiderflunky" class="slide level1">
+<h1>Super Secret Haskell SpiderFlunky</h1>
 </section>
     </div>
   </div>
