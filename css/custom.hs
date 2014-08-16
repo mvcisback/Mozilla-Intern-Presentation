@@ -10,13 +10,10 @@ bgColor = "#cfcfcf"
 main :: IO ()
 main = putCss myStylesheet
 
-notRefinement :: Text -> Refinement
-notRefinement x = (pseudo . concat) ["not(#", x, ")"]
-
 alignCenter = textAlign $ alignSide sideCenter
 
-myPre = ".slide" # notRefinement "a-slight-hack" ** pre ? alignCenter
-        >> ".slide" ** pre ? (fontSize (em (1.2)) >> width (pct 100))
+myPre = section # byClass "level2" # byId "a-slight-hack" ** pre ? (textAlign $ alignSide sideLeft)
+        >> ".slide" ** pre ? (fontSize (em (1.2)) >> width (pct 100) >> alignCenter)
         >> ".reveal" ** ".slide" ** pre ** code ? sym padding (px 0)
 
 developers = "#developers" ? do
@@ -28,11 +25,13 @@ developers = "#developers" ? do
                height (px 360)
                lineHeight (px 60)
                sym margin (px 0)
+
              >> "#developers" ** li ? do
                   animation "cycle" (sec 7) linear (sec 0) infinite normal none
                   sym padding (px 30)
-                   
+
              >> keyframesFromTo "cycle" t1 t2
+
     where t1 = transform $ translate (px 0) (px 0) :: Css
           t2 = transform $ translate (px 0) (px (-132)) :: Css
 

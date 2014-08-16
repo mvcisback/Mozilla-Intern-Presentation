@@ -5,12 +5,27 @@
 <img src="images/dXr.png" class="big-img">
 </section>
 
-# What is DxR
+# DxR?
 <div class="notes">
 - Lets get this out of the way
-- Dinos vs Robots
 - Dehydra Cross Reference
+- Disco Cross Reference
 </div>
+
+<img src="images/duhhh.gif" class="big-img">
+
+# Dinos vs Robots?
+<img src="images/dXr_old.png" class="big-img">
+
+# Dyhra Cross Reference
+
+# 
+<img src="images/what-does-that-mean.gif" class="big-img">
+
+# SEARCH!!!
+
+#
+<img src="images/wwysydh.gif" class="big-img">
 
 # Future of DxR
 
@@ -31,6 +46,7 @@
  - MXR duh...
 </div>
 
+
 # C Plugin #
 
 <div class="notes">
@@ -40,14 +56,22 @@
 
 # Type Search #
 
-# Hoogle #
-
 <div class="notes">
+   - Hoogle
    - Using Types as a query type
    - Structural Edits for fuzzy matching
 </div>
 
-# Specializing for C
+# Ok ...
+
+<img src="images/yea-k.gif" class="big-img">
+
+<div class="notes">
+   - Q: That's all good, how is that useful in not Haskell
+   - A: Next 2 Slides!!!
+</div>
+
+# C Type Search
 
 ```
 (type1<X,Y>, type2) -> output<Z>
@@ -59,23 +83,65 @@
    - C++ 11 auto can act as wild card type
 </div>
 
-# Ok ...
-<div class="notes">
-   - Q: That's all good, how is that useful in not Haskell
-   - A: Next 2 Slides!!!
-</div>
-
 # {.code}
+
+## {.code}
 
 ```
 (auto) -> B
 ```
 
+## {.code}
+
+```
+(int) -> B
+```
+
+## {.code}
+
+```
+(int*) -> B
+```
+
+## {.code}
+
+```
+(a1,a2) -> B
+```
+
+## {.code}
+
+```
+(auto) -> *B
+```
+
 # {.code}
+
+
+## {.code}
 
 ```
 (B) -> auto
 ```
+
+## {.code}
+
+```
+(B*) -> auto
+```
+
+## {.code}
+
+```
+(B) -> int
+```
+
+## {.code}
+
+```
+(B,A)-> auto
+```
+
 
 # JavaScript Types
 
@@ -90,8 +156,9 @@
 
 # 2) Cheat
 
-# A Slight Hack #
+# 
 
+## A Slight Hack ##
 ```
 interface Node {
     type: string;
@@ -107,7 +174,7 @@ interface Name <: P1, P1 {
 - Parse the Mozilla Parser API page to build Node inheritance graph.
 </div>
 
-# Super Secret Haskell SpiderFlunky #
+## spiderflunky.hs ##
 
 # 
 <ul id="developers">

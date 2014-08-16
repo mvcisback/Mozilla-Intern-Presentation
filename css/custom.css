@@ -109,15 +109,16 @@
 
 }
 
-.slide:not(#a-slight-hack) pre
+section#a-slight-hack.level2 pre
 {
-  text-align : center;
+  text-align : left;
 }
 
 .slide pre
 {
-  font-size : 1.19999em;
-  width     : 100%;
+  font-size  : 1.19999em;
+  width      : 100%;
+  text-align : center;
 }
 
 .reveal .slide pre code
