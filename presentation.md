@@ -1,5 +1,9 @@
-% DxR
-% Marcell Vazquez-Chanlatte/@mvcisback
+<section class="foo">
+<h1>DxR</h1>
+<h2>Marcell Vazquez-Chanlatte</h2>
+<h2>@mvcisback</h2>
+<img src="images/dXr.png" class="big-img">
+</section>
 
 # What is DxR
 <div class="notes">
@@ -11,14 +15,24 @@
 # Future of DxR
 
 <div class="notes">
-- Elastic Search
+- Sqllite -> Elastic Search
 - New Plugin Infrastructure
 -- Port C plugin
 - Javascript Support
 - TYPE SEARCH!!!!
 </div>
 
+# Similar Projects #
+
+<div class="notes">
+ - Hayoo (backend Holoubus)
+ - Hoogle <- We'll come back to this
+ - TODO insert other similar projects
+ - MXR duh...
+</div>
+
 # C Plugin #
+
 <div class="notes">
 - Really helped work on kinks in API
 - Horror stories of clang plugin
@@ -26,7 +40,7 @@
 
 # Type Search #
 
-# Hoogle - What it is #
+# Hoogle #
 
 <div class="notes">
    - Using Types as a query type
@@ -36,7 +50,7 @@
 # Specializing for C
 
 ```
-(type1<X,Y>, type2, type3) -> output<Z>
+(type1<X,Y>, type2) -> output<Z>
 ```
 
 <div class="notes">
@@ -51,50 +65,67 @@
    - A: Next 2 Slides!!!
 </div>
 
-# How do I get a type B
+# {.code}
 
 ```
 (auto) -> B
 ```
 
-# How do I use a type B
+# {.code}
 
 ```
 (B) -> auto
 ```
 
-# Fine, but what about Javascript?
+# JavaScript Types
 
 <div class="notes">
+ - All 5 of them
  - No, explicit types
  - Too dynamic too reliably infer in the general case
  - Overall a bad time
 </div>
 
-# 2 Step program for inferring Javascript types
-
 # 1) Don't
 
+# 2) Cheat
+
 # A Slight Hack #
-<div class="notes">
+
 ```
 interface Node {
     type: string;
     loc: SourceLocation | null;
 }
 
-interface Identifier <: Node, Expression, Pattern {
-    type: "Identifier";
-    name: string;
+interface Name <: P1, P1 {
+    key: val;
 }
 ```
 
 <div class="notes">
 - Parse the Mozilla Parser API page to build Node inheritance graph.
 </div>
+
 # Super Secret Haskell SpiderFlunky #
 
-# Contribute #
-- (http://www.github.com/mozilla/dxr)[github.com/mozilla/dxr]
-- #static
+# 
+<ul id="developers">
+<li>Developers!</li>
+<li>Developers!</li>
+<li>Developers!</li>
+<li>Developers!</li>
+<li>Developers!</li>
+</ul>
 
+
+- [github.com/mozilla/dxr](http://www.github.com/mozilla/dxr)
+- \#static
+
+# Thanks #
+<img src="images/erik.png" class="big-img">
+<div class="notes">
+- Stall for time
+- Erik
+- Whimsy Constabulary
+</div>

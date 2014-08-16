@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Marcell Vazquez-Chanlatte/@mvcisback" />
-  <title>DxR</title>
+  <title></title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
     <style type="text/css">code{white-space: pre;}</style>
-    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
       if( window.location.search.match( /print-pdf/gi ) ) {
@@ -29,12 +29,23 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-    <h1 class="title">DxR</h1>
-    <h2 class="author">Marcell Vazquez-Chanlatte/<span class="citation" data-cites="mvcisback">@mvcisback</span></h2>
-    <h3 class="date"></h3>
+
+<section class="slide level1">
+
+<section class="foo">
+<h1>
+DxR
+</h1>
+<h2>
+Marcell Vazquez-Chanlatte
+</h2>
+<h2>
+<span class="citation" data-cites="mvcisback">@mvcisback</span>
+</h2>
+<img src="images/dXr.png" class="big-img">
 </section>
 
+</section>
 <section id="what-is-dxr" class="slide level1">
 <h1>What is DxR</h1>
 <aside class="notes">
@@ -49,10 +60,21 @@
 <h1>Future of DxR</h1>
 <aside class="notes">
 <ul>
-<li>Elastic Search</li>
+<li>Sqllite -&gt; Elastic Search</li>
 <li>New Plugin Infrastructure -- Port C plugin</li>
 <li>Javascript Support</li>
 <li>TYPE SEARCH!!!!</li>
+</ul>
+</aside>
+</section>
+<section id="similar-projects" class="slide level1">
+<h1>Similar Projects</h1>
+<aside class="notes">
+<ul>
+<li>Hayoo (backend Holoubus)</li>
+<li>Hoogle &lt;- We'll come back to this</li>
+<li>TODO insert other similar projects</li>
+<li>MXR duh...</li>
 </ul>
 </aside>
 </section>
@@ -68,8 +90,8 @@
 <section id="type-search" class="slide level1">
 <h1>Type Search</h1>
 </section>
-<section id="hoogle---what-it-is" class="slide level1">
-<h1>Hoogle - What it is</h1>
+<section id="hoogle" class="slide level1">
+<h1>Hoogle</h1>
 <aside class="notes">
 <ul>
 <li>Using Types as a query type</li>
@@ -79,7 +101,7 @@
 </section>
 <section id="specializing-for-c" class="slide level1">
 <h1>Specializing for C</h1>
-<pre><code>(type1&lt;X,Y&gt;, type2, type3) -&gt; output&lt;Z&gt;</code></pre>
+<pre><code>(type1&lt;X,Y&gt;, type2) -&gt; output&lt;Z&gt;</code></pre>
 <aside class="notes">
 <ul>
 <li>Various attempts at query language</li>
@@ -97,41 +119,40 @@
 </ul>
 </aside>
 </section>
-<section id="how-do-i-get-a-type-b" class="slide level1">
-<h1>How do I get a type B</h1>
+<section id="section" class="slide level1 code">
+<h1></h1>
 <pre><code>(auto) -&gt; B</code></pre>
 </section>
-<section id="how-do-i-use-a-type-b" class="slide level1">
-<h1>How do I use a type B</h1>
+<section id="section-1" class="slide level1 code">
+<h1></h1>
 <pre><code>(B) -&gt; auto</code></pre>
 </section>
-<section id="fine-but-what-about-javascript" class="slide level1">
-<h1>Fine, but what about Javascript?</h1>
+<section id="javascript-types" class="slide level1">
+<h1>JavaScript Types</h1>
 <aside class="notes">
 <ul>
+<li>All 5 of them</li>
 <li>No, explicit types</li>
 <li>Too dynamic too reliably infer in the general case</li>
 <li>Overall a bad time</li>
 </ul>
 </aside>
 </section>
-<section id="step-program-for-inferring-javascript-types" class="slide level1">
-<h1>2 Step program for inferring Javascript types</h1>
-</section>
 <section id="dont" class="slide level1">
 <h1>1) Don't</h1>
 </section>
+<section id="cheat" class="slide level1">
+<h1>2) Cheat</h1>
+</section>
 <section id="a-slight-hack" class="slide level1">
 <h1>A Slight Hack</h1>
-<div class="notes">
 <pre><code>interface Node {
     type: string;
     loc: SourceLocation | null;
 }
 
-interface Identifier &lt;: Node, Expression, Pattern {
-    type: &quot;Identifier&quot;;
-    name: string;
+interface Name &lt;: P1, P1 {
+    key: val;
 }</code></pre>
 <aside class="notes">
 <ul>
@@ -142,12 +163,42 @@ interface Identifier &lt;: Node, Expression, Pattern {
 <section id="super-secret-haskell-spiderflunky" class="slide level1">
 <h1>Super Secret Haskell SpiderFlunky</h1>
 </section>
-<section id="contribute" class="slide level1">
-<h1>Contribute</h1>
-<ul>
-<li>(http://www.github.com/mozilla/dxr)[github.com/mozilla/dxr]</li>
-<li><h1>static</h1></li>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<ul id="developers">
+<li>
+Developers!
+</li>
+<li>
+Developers!
+</li>
+<li>
+Developers!
+</li>
+<li>
+Developers!
+</li>
+<li>
+Developers!
+</li>
 </ul>
+
+
+<ul>
+<li><a href="http://www.github.com/mozilla/dxr">github.com/mozilla/dxr</a></li>
+<li>#static</li>
+</ul>
+</section>
+<section id="thanks" class="slide level1">
+<h1>Thanks</h1>
+<img src="images/erik.png" class="big-img">
+<aside class="notes">
+<ul>
+<li>Stall for time</li>
+<li>Erik</li>
+<li>Whimsy Constabulary</li>
+</ul>
+</aside>
 </section>
     </div>
   </div>
@@ -165,7 +216,7 @@ interface Identifier &lt;: Node, Expression, Pattern {
         progress: true,
         history: true,
         center: true,
-        theme: 'default', // available themes are in /css/theme
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
 
         // Optional libraries used to extend on reveal.js
