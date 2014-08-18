@@ -1,0 +1,70 @@
+Hi, I'm Marcell Vazquez-Chanlatte ... and this is DxR.
+
+So lets this out of the way. What is DxR??
+
+Dinos vs Robots?
+
+DxR Cross Reference?
+
+Sadly, no...it means Dyhdra Cross Reference
+
+...Yeah so what the heck does that mean? I suppose the key clue is in cross reference.
+
+With DxR we're indexing a project so that one can perform interesting queries on the data. <TODO: Insert types of search>
+
+Ok, so where do I come in? DxR is currently in the process of moving away from Trilite to Elastic Search and all the work I did this summer either directly or indirectly supported this. The change is a long time in the making has alot of benefits.
+
+For one, we expect it to be much faster and scale much better. This should come as good news to alot of our users, because after "what the heck is DXR?" the 2nd most common question I get about DxR is "WHY IS DxR so SLOW?!". <insert prelim benchmarks>
+- Side Note: I'm not really sure where this gif comes from. I think George Lucas test piloted a prequel to star wars and decided to scrap the whole thing.
+
+During the move to DxR, we've started decoupling the plugins from the storage infrastructure. Previously the Clang plugin (and the in development Rust plugin) directly interacted with the SQLite database. This has made makes multi-language support MUCH easier.
+
+Before we get multi language support...we needed to port the C plugin. The process was relatively straight forward, and as my statistical mechanics professor used to say "models all the essential physics".
+
+We hook into the clang compiler to abstract the abstract syntax tree,  returns meta data such as variable references, call sites, declarations, inheritance structure. Those get transformed into Key Value pairs dubbed needles which are organized by line. DxR then sends those off to Elastic Search for indexing.
+
+At that point we can use dxr's reverse index to quickly search the codebase, ranking by relevancy. Easy Peasy
+
+Type Search is a new search option coming to DxR (and my baby). DxR already had this in the form of searching for various classes and type definitions, but this extends that to function type signatures. Haskell's Hoogle heavily influenced the design of DxR's Type Search, so if you're familar with that tool you'll feel right at home.
+
+If not, you might be thinking "Ok... wooo /s". The strength of this technique is certainly less powerful without the more expressive type systems found in ML style languages, but I content that type chasing is still often the best way to explore an API.
+
+To show this, lets go over an example with C.  The key features are that inputs are uncurried aka packed together followed by an arrow pointing to the output.
+
+This is an example query. We're still playing with the Query DSL so input is appreciated. The syntax is similar to C++11's auto function syntax. An underscore or auto indicates that you're only interested in the shape. It's reminiscent of type variables, but without the ability to uniquely identify between them. Type variables are something that I'd like to eventually see, and mostly involves just touch the Elastic Search analyzer code. So if a type signature matches exactly, it should obviously be at the top of the search results. But what about fuzzy matching? For this we turn to edit distances.
+
+Suppose we decide to specialize _ for int. 1 edit distance. What about adding a pointer container around it. 1 edit distance. What about adding an extra argument? 1 edit distance. And there's really no reason to limit the edits to the inputs. *Quickly go over more examples* I think you get the point.
+
+That's all well and good, but what about JavaScript?!! Good news, thats in the pipeline. But before I go into the details of the JavaScript plugin, let me give you a 2 step algorithm for inferring javascript types. Step 1 Don't...Step 2 Cheat.
+
+Lets go over step 1. By this I mean a 2 things. First, essiental to recognize just how hard a problem this is. Tempting as it may be to approach it naively, Javascript is a very dynamic language... without some kind of executable semantics, many tools end up being incorrect and based on the authors adhoc understanding of the spec. 2nd, you can always get types from source code annotations. I've found typescript definition files to work pretty well, and there are quite a few of them for common libraries. At the end of the day, after indexing it doesn't matter how the types were acquired.
+
+Step 2 Cheat...Fact DxR isn't a compiler. That means it doesn't _have_ to have sound type inference. Its ok if we're alittle optimistic with our type inference. Ternjs and alot of other Javascript tooling leverage this fact, and are alittle more optimistic than ionmonkey. 
+
+In fact, much of the DxR's JavaScript support currently comes from a ternjs plugin. Benefits include:
+1. its already implemnted
+2. has a community
+3. no immediate costs to maintain
+4. when the ES6 spec finally get standardized...it'll likely get support.
+
+We always developed a tool called Spiderflunky. Its written in  python (because that's what DxR is written in), and uses Spidermonkey's Reflect.parse to get the AST (similar to app validator). Its mainly a way to harvest other data out of the AST that's a pain to get out of ternjs (not impossible but, introduces a good deal of complexity). If it become full feature enough, it might just replace all the features of ternjs, but don't get your hopes up.
+
+<Depending on Time talk about how spiderflunky works>
+
+If the existance of MxR and Dyhdra wasn't enough to convince you, code search at this scale is hardly a new idea.
+
+SourceGraph isn't open source, and only works with Python, Ruby, and Go...so completely disjoint language coverage.
+
+Hoogle only does type search (I could talk for awhile about the issues involved with getting it to look at another language but I'll spare you).
+
+Hayoo, kind of like hoogle and based on holubus, but with less of a type search focus. In fact, the paper describing  Holobus' indexer even mentions lucene (elastic searche's backend) as an alternative. That said, I've looked at it...and its not for the faint hearts, particularly if you're not an ML programer. Actually might be feasible to get alternative language support...but probably not gonna happen.
+
+<no slide transition>
+So how can you get involved with DxR???
+
+Developers! Developers! Developers! Big shoutout to mythmon for taking for the CSS animations. If you want to get involved with DxR...or just ask questions we chat in #static and develop under mozilla's github org. Pretty active community
+
+Last, big thanks to Erik Rose + all the Department of Whimsy (constabulary)....
+-Sidenote: I really wish I had been the one to make this picture. It's from one of Erik's slide decks so its totally fair game. 
+
+I now open the floor for questions

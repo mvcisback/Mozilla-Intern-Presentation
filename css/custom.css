@@ -161,7 +161,7 @@ section#a-slight-hack.level2 pre
 #developers
 {
   list-style-type : none;
-  font-size       : 3em;
+  font-size       : 120px;
   overflow        : hidden;
   border          : solid 1px rgb(0,0,0);
   text-align      : center;
@@ -172,11 +172,11 @@ section#a-slight-hack.level2 pre
 
 #developers li
 {
-  -webkit-animation : cycle 7.0s linear 0.0s infinite normal none;
-  -moz-animation    : cycle 7.0s linear 0.0s infinite normal none;
-  -ms-animation     : cycle 7.0s linear 0.0s infinite normal none;
-  -o-animation      : cycle 7.0s linear 0.0s infinite normal none;
-  animation         : cycle 7.0s linear 0.0s infinite normal none;
+  -webkit-animation : cycle 10.0s linear 0.0s infinite normal none;
+  -moz-animation    : cycle 10.0s linear 0.0s infinite normal none;
+  -ms-animation     : cycle 10.0s linear 0.0s infinite normal none;
+  -o-animation      : cycle 10.0s linear 0.0s infinite normal none;
+  animation         : cycle 10.0s linear 0.0s infinite normal none;
   padding           : 30px 30px 30px 30px;
 }
 

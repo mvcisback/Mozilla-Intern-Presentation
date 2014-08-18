@@ -61,6 +61,10 @@ Marcell Vazquez-Chanlatte
 <h1>Dinos vs Robots?</h1>
 <p><img src="images/dXr_old.png" class="big-img"></p>
 </section>
+<section id="dxr-cross-reference" class="slide level1">
+<h1>DxR Cross Reference</h1>
+<p>TODO: Yo dog I heard you like DxR</p>
+</section>
 <section id="dyhra-cross-reference" class="slide level1">
 <h1>Dyhra Cross Reference</h1>
 </section>
@@ -75,27 +79,13 @@ Marcell Vazquez-Chanlatte
 <h1></h1>
 <p><img src="images/wwysydh.gif" class="big-img"></p>
 </section>
-<section id="future-of-dxr" class="slide level1">
-<h1>Future of DxR</h1>
-<aside class="notes">
-<ul>
-<li>Sqllite -&gt; Elastic Search</li>
-<li>New Plugin Infrastructure -- Port C plugin</li>
-<li>Javascript Support</li>
-<li>TYPE SEARCH!!!!</li>
-</ul>
-</aside>
+<section id="such-speed" class="slide level1">
+<h1>Such Speed</h1>
+<p><img src="images/such_speed.gif" class="big-img"></p>
 </section>
-<section id="similar-projects" class="slide level1">
-<h1>Similar Projects</h1>
-<aside class="notes">
-<ul>
-<li>Hayoo (backend Holoubus)</li>
-<li>Hoogle &lt;- We'll come back to this</li>
-<li>TODO insert other similar projects</li>
-<li>MXR duh...</li>
-</ul>
-</aside>
+<section id="untangling-the-mess" class="slide level1">
+<h1>Untangling the mess</h1>
+<p><img src="images/spaghetti.gif" class="big-img"></p>
 </section>
 <section id="c-plugin" class="slide level1">
 <h1>C Plugin</h1>
@@ -106,11 +96,20 @@ Marcell Vazquez-Chanlatte
 </ul>
 </aside>
 </section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<p>TODO: Make diagram AST -&gt; meta data -&gt; (key, val, loc) -&gt; ES</p>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<p>TODO: Make Diagram Query -&gt; (val, loc, rank) -&gt; prettified output</p>
+</section>
 <section id="type-search" class="slide level1">
 <h1>Type Search</h1>
 <aside class="notes">
 <ul>
 <li>Hoogle</li>
+<li>Hayoo</li>
 <li>Using Types as a query type</li>
 <li>Structural Edits for fuzzy matching</li>
 </ul>
@@ -137,67 +136,68 @@ Marcell Vazquez-Chanlatte
 </ul>
 </aside>
 </section>
-<section id="section-2" class="slide level1 code">
+<section id="section-4" class="slide level1 code">
 <h1></h1>
-<section id="section-3" class="level2 code">
-<h2></h2>
-<pre><code>(auto) -&gt; B</code></pre>
-</section>
-<section id="section-4" class="level2 code">
-<h2></h2>
-<pre><code>(int) -&gt; B</code></pre>
-</section>
 <section id="section-5" class="level2 code">
 <h2></h2>
-<pre><code>(int*) -&gt; B</code></pre>
+<pre><code>(auto)-&gt; B</code></pre>
+<pre><code>(_)-&gt; B</code></pre>
 </section>
 <section id="section-6" class="level2 code">
 <h2></h2>
-<pre><code>(a1,a2) -&gt; B</code></pre>
+<pre><code>(int)-&gt; B</code></pre>
 </section>
 <section id="section-7" class="level2 code">
 <h2></h2>
-<pre><code>(auto) -&gt; *B</code></pre>
+<pre><code>(_*)-&gt; B</code></pre>
 </section>
+<section id="section-8" class="level2 code">
+<h2></h2>
+<pre><code>(_,_)-&gt; B</code></pre>
 </section>
-<section id="section-8" class="slide level1 code">
-<h1></h1>
 <section id="section-9" class="level2 code">
 <h2></h2>
-<pre><code>(B) -&gt; auto</code></pre>
+<pre><code>(_)-&gt; *B</code></pre>
 </section>
-<section id="section-10" class="level2 code">
-<h2></h2>
-<pre><code>(B*) -&gt; auto</code></pre>
 </section>
+<section id="section-10" class="slide level1 code">
+<h1></h1>
 <section id="section-11" class="level2 code">
 <h2></h2>
-<pre><code>(B) -&gt; int</code></pre>
+<pre><code>(B)-&gt; auto</code></pre>
+<pre><code>(B)-&gt; _</code></pre>
 </section>
 <section id="section-12" class="level2 code">
 <h2></h2>
-<pre><code>(B,A)-&gt; auto</code></pre>
+<pre><code>(B*)-&gt; _</code></pre>
+</section>
+<section id="section-13" class="level2 code">
+<h2></h2>
+<pre><code>(B)-&gt; int</code></pre>
+</section>
+<section id="section-14" class="level2 code">
+<h2></h2>
+<pre><code>(B,A)-&gt; _</code></pre>
 </section>
 </section>
-<section id="javascript-types" class="slide level1">
-<h1>JavaScript Types</h1>
-<aside class="notes">
-<ul>
-<li>All 5 of them</li>
-<li>No, explicit types</li>
-<li>Too dynamic too reliably infer in the general case</li>
-<li>Overall a bad time</li>
-</ul>
-</aside>
+<section id="section-15" class="slide level1">
+<h1></h1>
+<p><img src="images/why_not_js.jpg" class="big-img"></p>
 </section>
 <section id="dont" class="slide level1">
-<h1>1) Don't</h1>
+<h1>1. Don't</h1>
 </section>
 <section id="cheat" class="slide level1">
-<h1>2) Cheat</h1>
+<h1>2. Cheat</h1>
 </section>
-<section id="section-13" class="slide level1">
+<section id="ternjs" class="slide level1">
+<h1>Ternjs</h1>
+</section>
+<section id="section-16" class="slide level1">
 <h1></h1>
+<section id="spider-flunky" class="level2">
+<h2>Spider Flunky</h2>
+</section>
 <section id="a-slight-hack" class="level2">
 <h2>A Slight Hack</h2>
 <pre><code>interface Node {
@@ -218,7 +218,22 @@ interface Name &lt;: P1, P1 {
 <h2>spiderflunky.hs</h2>
 </section>
 </section>
-<section id="section-14" class="slide level1">
+<section id="section-17" class="slide level1">
+<h1></h1>
+<section id="similar-projects" class="level2">
+<h2>Similar Projects</h2>
+</section>
+<section id="source-graph" class="level2">
+<h2>Source Graph</h2>
+</section>
+<section id="hoogle" class="level2">
+<h2>Hoogle</h2>
+</section>
+<section id="hayoo" class="level2">
+<h2>Hayoo</h2>
+</section>
+</section>
+<section id="section-18" class="slide level1">
 <h1></h1>
 <ul id="developers">
 <li>
@@ -239,6 +254,12 @@ Developers!
 </ul>
 
 
+<aside class="notes">
+<ul>
+<li>TODO insert other similar projects</li>
+<li>MXR duh...</li>
+</ul>
+</aside>
 <ul>
 <li><a href="http://www.github.com/mozilla/dxr">github.com/mozilla/dxr</a></li>
 <li>#static</li>
@@ -254,6 +275,9 @@ Developers!
 <li>Whimsy Constabulary</li>
 </ul>
 </aside>
+</section>
+<section id="questions" class="slide level1">
+<h1>????????????????Questions???????????????????????????????????????????????????????????</h1>
 </section>
     </div>
   </div>

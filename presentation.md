@@ -17,6 +17,9 @@
 # Dinos vs Robots?
 <img src="images/dXr_old.png" class="big-img">
 
+# DxR Cross Reference
+TODO: Yo dog I heard you like DxR
+
 # Dyhra Cross Reference
 
 # 
@@ -27,24 +30,12 @@
 #
 <img src="images/wwysydh.gif" class="big-img">
 
-# Future of DxR
+# Such Speed
+<img src="images/such_speed.gif" class="big-img">
 
-<div class="notes">
-- Sqllite -> Elastic Search
-- New Plugin Infrastructure
--- Port C plugin
-- Javascript Support
-- TYPE SEARCH!!!!
-</div>
 
-# Similar Projects #
-
-<div class="notes">
- - Hayoo (backend Holoubus)
- - Hoogle <- We'll come back to this
- - TODO insert other similar projects
- - MXR duh...
-</div>
+# Untangling the mess
+<img src="images/spaghetti.gif" class="big-img">
 
 
 # C Plugin #
@@ -54,10 +45,21 @@
 - Horror stories of clang plugin
 </div>
 
+# 
+
+TODO: Make diagram
+AST -> meta data -> (key, val, loc) -> ES
+
+#
+
+TODO: Make Diagram
+Query -> (val, loc, rank) -> prettified output
+
 # Type Search #
 
 <div class="notes">
    - Hoogle
+   - Hayoo
    - Using Types as a query type
    - Structural Edits for fuzzy matching
 </div>
@@ -88,31 +90,35 @@
 ## {.code}
 
 ```
-(auto) -> B
+(auto)-> B
+```
+
+```
+(_)-> B
 ```
 
 ## {.code}
 
 ```
-(int) -> B
+(int)-> B
 ```
 
 ## {.code}
 
 ```
-(int*) -> B
+(_*)-> B
 ```
 
 ## {.code}
 
 ```
-(a1,a2) -> B
+(_,_)-> B
 ```
 
 ## {.code}
 
 ```
-(auto) -> *B
+(_)-> *B
 ```
 
 # {.code}
@@ -121,42 +127,44 @@
 ## {.code}
 
 ```
-(B) -> auto
+(B)-> auto
+```
+
+```
+(B)-> _
 ```
 
 ## {.code}
 
 ```
-(B*) -> auto
+(B*)-> _
 ```
 
 ## {.code}
 
 ```
-(B) -> int
+(B)-> int
 ```
 
 ## {.code}
 
 ```
-(B,A)-> auto
+(B,A)-> _
 ```
 
+#
 
-# JavaScript Types
+<img src="images/why_not_js.jpg" class="big-img">
 
-<div class="notes">
- - All 5 of them
- - No, explicit types
- - Too dynamic too reliably infer in the general case
- - Overall a bad time
-</div>
+# 1. Don't
 
-# 1) Don't
+# 2. Cheat
 
-# 2) Cheat
+# Ternjs
 
-# 
+#
+
+## Spider Flunky
 
 ## A Slight Hack ##
 ```
@@ -176,6 +184,17 @@ interface Name <: P1, P1 {
 
 ## spiderflunky.hs ##
 
+
+# 
+
+## Similar Projects ##
+
+## Source Graph ##
+
+## Hoogle ##
+
+## Hayoo ##
+
 # 
 <ul id="developers">
 <li>Developers!</li>
@@ -185,6 +204,11 @@ interface Name <: P1, P1 {
 <li>Developers!</li>
 </ul>
 
+
+<div class="notes">
+ - TODO insert other similar projects
+ - MXR duh...
+</div>
 
 - [github.com/mozilla/dxr](http://www.github.com/mozilla/dxr)
 - \#static
@@ -196,3 +220,5 @@ interface Name <: P1, P1 {
 - Erik
 - Whimsy Constabulary
 </div>
+
+# ????????????????Questions???????????????????????????????????????????????????????????

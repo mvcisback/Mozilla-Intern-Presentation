@@ -18,7 +18,7 @@ myPre = section # byClass "level2" # byId "a-slight-hack" ** pre ? (textAlign $ 
 
 developers = "#developers" ? do
                listStyleType none
-               fontSize (em 3)
+               fontSize (px 120)
                overflow hidden
                border solid (px 1) "#000"
                alignCenter
@@ -27,7 +27,7 @@ developers = "#developers" ? do
                sym margin (px 0)
 
              >> "#developers" ** li ? do
-                  animation "cycle" (sec 7) linear (sec 0) infinite normal none
+                  animation "cycle" (sec 10) linear (sec 0) infinite normal none
                   sym padding (px 30)
 
              >> keyframesFromTo "cycle" t1 t2
