@@ -18,9 +18,9 @@
 <img src="images/dXr_old.png" class="big-img">
 
 # DxR Cross Reference
-TODO: Yo dog I heard you like DxR
+<img src="images/yo_dawg.jpg" class="big-img">
 
-# Dyhra Cross Reference
+# Dehydra Cross Reference
 
 # 
 <img src="images/what-does-that-mean.gif" class="big-img">
@@ -181,6 +181,10 @@ interface Name <: P1, P1 {
 <div class="notes">
 - Parse the Mozilla Parser API page to build Node inheritance graph.
 </div>
+
+##
+
+<img src="images/threw_up.gif" class="big-img">
 
 ## spiderflunky.hs ##
 
