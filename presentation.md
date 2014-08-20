@@ -43,14 +43,11 @@
 </div>
 
 # 
-
-TODO: Make diagram
-AST -> meta data -> (key, val, loc) -> ES
+<img src="images/indexer.svg" class="big-img">
 
 #
 
-TODO: Make Diagram
-Query -> (val, loc, rank) -> prettified output
+<img src="images/query.svg" class="big-img">
 
 # Type Search #
 
