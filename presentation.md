@@ -1,9 +1,11 @@
-<section class="foo">
+# Test Slide 1
+
+# Test Slide 2
+
+# 
 <img src="images/dXr.png" class="big-img">
 <h2>Marcell Vazquez-Chanlatte</h2>
 <h2>@mvcisback</h2>
-
-</section>
 
 # DXR?
 <div class="notes">
