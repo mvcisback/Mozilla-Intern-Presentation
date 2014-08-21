@@ -52,14 +52,12 @@ Marcell Vazquez-Chanlatte
 <aside class="notes">
 <ul>
 <li>Lets get this out of the way</li>
-<li>Dehydra Cross Reference</li>
-<li>Disco Cross Reference</li>
 </ul>
 </aside>
 <p><img src="images/duhhh.gif" class="big-img"></p>
 </section>
-<section id="dinos-vs-robots" class="slide level1">
-<h1>Dinos vs Robots?</h1>
+<section id="dinos-x-robots" class="slide level1">
+<h1>Dinos x Robots?</h1>
 <p><img src="images/dXr_old.png" class="big-img"></p>
 </section>
 <section id="dxr-cross-reference" class="slide level1">
@@ -76,9 +74,59 @@ Marcell Vazquez-Chanlatte
 <section id="search" class="slide level1">
 <h1>SEARCH!!!</h1>
 </section>
+<section id="paths-and-text" class="slide level1">
+<h1>Paths and Text</h1>
+<aside class="notes">
+<ul>
+<li>search for file based on ext or path</li>
+<li>the text in the files</li>
+</ul>
+</aside>
+</section>
+<section id="cross-reference" class="slide level1">
+<h1>Cross Reference</h1>
+<aside class="notes">
+<ul>
+<li>hg supportb</li>
+</ul>
+</aside>
+</section>
+<section id="symbol-queries" class="slide level1">
+<h1>Symbol Queries</h1>
+<aside class="notes">
+<ul>
+<li>variable, functions, and other symbol names</li>
+<li>symbol declaration and references</li>
+<li>The old way type search used to be implemented</li>
+</ul>
+</aside>
+</section>
+<section id="call-sites" class="slide level1">
+<h1>Call Sites</h1>
+</section>
+<section id="inheritance-structure" class="slide level1">
+<h1>Inheritance Structure</h1>
+</section>
 <section id="section-2" class="slide level1">
 <h1></h1>
 <p><img src="images/wwysydh.gif" class="big-img"></p>
+<aside class="notes">
+<ul>
+<li>Help Move to ES</li>
+<li>Type Search</li>
+<li>JS Support</li>
+</ul>
+</aside>
+</section>
+<section id="elastic-search" class="slide level1">
+<h1>Elastic Search</h1>
+<aside class="notes">
+<ul>
+<li>clean line based search</li>
+<li>sparse attribute storage</li>
+<li>incredibly flexible query and filter system</li>
+</ul>
+</aside>
 </section>
 <section id="untangling-the-mess" class="slide level1">
 <h1>Untangling the mess</h1>
@@ -90,12 +138,21 @@ Marcell Vazquez-Chanlatte
 <ul>
 <li>Really helped work on kinks in API</li>
 <li>Horror stories of clang plugin</li>
+<li>Fun fact, generators ton't pickle</li>
 </ul>
 </aside>
 </section>
 <section id="section-3" class="slide level1">
 <h1></h1>
 <p><img src="images/indexer.svg" class="big-img"></p>
+<aside class="notes">
+<ul>
+<li>Generate AST and Meta Data via a clang plugin hook</li>
+<li>Intermediate SQL Queries and DataBases inserts are now dicts and generators</li>
+<li>Transformation into k,v,loc</li>
+<li>Black Magic</li>
+</ul>
+</aside>
 </section>
 <section id="section-4" class="slide level1">
 <h1></h1>
@@ -125,75 +182,68 @@ Marcell Vazquez-Chanlatte
 <section id="c-type-search" class="slide level1">
 <h1>C Type Search</h1>
 </section>
-<section id="section-5" class="slide level1 code">
+<section id="section-5" class="slide level1">
+<h1></h1>
+<section id="section-6" class="level2 code">
+<h2></h2>
+<pre><code>(a**,b)-&gt; c</code></pre>
+<pre><code>a;*;*;b|c</code></pre>
+</section>
+<section id="section-7" class="level2 code">
+<h2></h2>
+<pre><code>a;*;*;b|c</code></pre>
+<pre><code>a;*;*;b;*|c</code></pre>
+</section>
+<section id="section-8" class="level2 code">
+<h2></h2>
+<pre><code>a;*;*;b|c</code></pre>
+<pre><code>a;*;*;b|d</code></pre>
+</section>
+<section id="section-9" class="level2 code">
+<h2></h2>
+<pre><code>a;*;*;b|c</code></pre>
+<pre><code>a;*;*;b;d|c</code></pre>
+</section>
+</section>
+<section id="section-10" class="slide level1 code">
 <h1></h1>
 <pre><code>(Q&lt;T&gt;)-&gt; T</code></pre>
+<pre><code>Q;T|T</code></pre>
 <aside class="notes">
 <ul>
+<li>Its not all Rainbows and Sunshine</li>
 <li>Various attempts at query language</li>
 <li>C++ 11 auto function definition looks like uncurried version</li>
 <li>C++ 11 auto can act as wild card type</li>
 </ul>
 </aside>
 </section>
-<section id="section-6" class="slide level1 code">
-<h1></h1>
-<section id="section-7" class="level2 code">
-<h2></h2>
-<pre><code>(auto)-&gt; B</code></pre>
-<pre><code>(_)-&gt; B</code></pre>
-</section>
-<section id="section-8" class="level2 code">
-<h2></h2>
-<pre><code>(int)-&gt; B</code></pre>
-</section>
-<section id="section-9" class="level2 code">
-<h2></h2>
-<pre><code>(_*)-&gt; B</code></pre>
-</section>
-<section id="section-10" class="level2 code">
-<h2></h2>
-<pre><code>(_,_)-&gt; B</code></pre>
-</section>
-<section id="section-11" class="level2 code">
-<h2></h2>
-<pre><code>(_)-&gt; *B</code></pre>
-</section>
-</section>
-<section id="section-12" class="slide level1 code">
-<h1></h1>
-<section id="section-13" class="level2 code">
-<h2></h2>
-<pre><code>(B)-&gt; auto</code></pre>
-<pre><code>(B)-&gt; _</code></pre>
-</section>
-<section id="section-14" class="level2 code">
-<h2></h2>
-<pre><code>(B*)-&gt; _</code></pre>
-</section>
-<section id="section-15" class="level2 code">
-<h2></h2>
-<pre><code>(B)-&gt; int</code></pre>
-</section>
-<section id="section-16" class="level2 code">
-<h2></h2>
-<pre><code>(B,A)-&gt; _</code></pre>
-</section>
-</section>
-<section id="section-17" class="slide level1">
+<section id="section-11" class="slide level1">
 <h1></h1>
 <p><img src="images/why_not_js.jpg" class="big-img"></p>
 </section>
 <section id="dont" class="slide level1">
 <h1>1. Don't</h1>
+<aside class="notes">
+<ul>
+<li>no executable semantics</li>
+<li>incorrect, authors adhoc understanding of the spec</li>
+<li>can use type annotations (typescript, closure compiler)</li>
+</ul>
+</aside>
 </section>
 <section id="cheat" class="slide level1">
 <h1>2. Cheat</h1>
+<aside class="notes">
+<ul>
+<li>fact: DXR is not a compiler</li>
+</ul>
+</aside>
 </section>
 <section id="ternjs" class="slide level1">
 <h1>Ternjs</h1>
 </section>
-<section id="section-18" class="slide level1">
+<section id="section-12" class="slide level1">
 <h1></h1>
 <section id="spiderflunky" class="level2">
 <h2>SpiderFlunky</h2>
@@ -215,7 +265,7 @@ interface Name &lt;: P1, P1 {
 </ul>
 </aside>
 </section>
-<section id="section-19" class="level2">
+<section id="section-13" class="level2">
 <h2></h2>
 <p><img src="images/threw_up.gif" class="big-img"></p>
 </section>
@@ -223,7 +273,7 @@ interface Name &lt;: P1, P1 {
 <h2>spiderflunky.hs</h2>
 </section>
 </section>
-<section id="section-20" class="slide level1">
+<section id="section-14" class="slide level1">
 <h1></h1>
 <section id="similar-projects" class="level2">
 <h2>Similar Projects</h2>
@@ -236,9 +286,14 @@ interface Name &lt;: P1, P1 {
 </section>
 <section id="hayoo" class="level2">
 <h2>Hayoo</h2>
+<aside class="notes">
+<ul>
+<li>holumbus mentions lucene</li>
+</ul>
+</aside>
 </section>
 </section>
-<section id="section-21" class="slide level1">
+<section id="section-15" class="slide level1">
 <h1></h1>
 <ul id="developers">
 <li>
